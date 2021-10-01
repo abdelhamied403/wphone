@@ -3,7 +3,8 @@ require('dotenv').config()
 
 module.exports = {
   entry: {
-    'wphone': './dist/example.js'
+    'wphone': './dist/example.js',
+    'index': './dist/index'
   },
   devtool: 'inline-source-map',
   mode: 'development',
