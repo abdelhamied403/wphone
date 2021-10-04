@@ -5,8 +5,8 @@
   "main": "dist/index",
   "types": "dist/index",
   "scripts": {
-    "start": "http-server public -S -C ./etc/cert.pem -K ./etc/key.pem -o -c10",
-    "start:unsecured": "http-server public -o -c10",
+    "start:secure": "http-server public -S -C ./etc/cert.pem -K ./etc/key.pem -o -c10",
+    "start": "http-server public -o -c10",
     "build": "tsc && webpack --progress --config webpack.config.cjs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "gen:docs": "node .scripts/docs-generator.js && cp docs/WPhone.md README.md",
