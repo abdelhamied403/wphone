@@ -10,7 +10,7 @@
     "build": "tsc && webpack --progress --config webpack.config.cjs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "gen:docs": "node .scripts/docs-generator.js && cp docs/WPhone.md README.md",
-    "gen:certs": ""
+    "gen:certs": "openssl req -nodes -new -x509 -keyout etc/key.pem -out etc/cert.pem"
   },
   "dependencies": {
     "sip.js": "0.19.0"

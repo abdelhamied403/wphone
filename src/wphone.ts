@@ -48,6 +48,24 @@ import Events from "events";
  * 
  * > Thanks to the folks at [onsip.com](onsip.com) for such a fantastic job with SIP.js. 🔥
  * 
+ * Use the `start` script to start the example wphone:
+ * 
+ * ```
+ * npm run start:unsecured
+ * ```
+ * 
+ * To launch with elf-signed certificate, First, generate a new set of certificates with:
+ * 
+ * ```
+ * npm run gen:certs
+ * ```
+ * 
+ * Next, allow self-signed certificates in your browser. In chrome you can enable it with:
+ * 
+ * `chrome://flags/#allow-insecure-localhost`
+ * 
+ * Finally, run the wphone with `npm start`
+ * 
  * @example
  * const WPhone = require("wphone");
  * 
