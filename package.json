@@ -5,7 +5,7 @@
   "main": "dist/index",
   "types": "dist/index",
   "scripts": {
-    "start:secure": "http-server public -S -C ./etc/cert.pem -K ./etc/key.pem -o -c10",
+    "start:secured": "http-server public -S -C ./etc/cert.pem -K ./etc/key.pem -o -c10",
     "start": "http-server public -o -c10",
     "build": "tsc && webpack --progress --config webpack.config.cjs",
     "test": "echo \"Error: no test specified\" && exit 1",
