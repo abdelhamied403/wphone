@@ -28,8 +28,8 @@ export const disconnectButton = getButton("disconnect");
 
 // Obtaining config from localStorage if available
 window.onload = async () => {
-  console.debug("Getting config from localStorage [fonosphone]");
-  const configString = window.localStorage.getItem("fonosphone");
+  console.debug("Getting config from localStorage [fonosterPhone]");
+  const configString = window.localStorage.getItem("fonosterPhone");
 
   if (configString) {
     const config = JSON.parse(configString);
@@ -62,7 +62,7 @@ connectButton.addEventListener("click", async () => {
     if (config.extraHeaders) {
       config.extraHeaders = config.extraHeaders.join(",")
     }
-    window.localStorage.setItem("fonosphone", JSON.stringify(config));
+    window.localStorage.setItem("fonosterPhone", JSON.stringify(config));
   } catch (e) {
     window.alert(e);
   }

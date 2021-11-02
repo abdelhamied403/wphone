@@ -1,5 +1,5 @@
 /// <reference types="node" />
-import { CallRequest, FonosPhoneConfig, MessageRequest } from "./types";
+import { CallRequest, FonosterPhoneConfig, MessageRequest } from "./types";
 import { Registerer, SessionDescriptionHandler, UserAgent } from "sip.js";
 import Events from "events";
 export default class Phone {
@@ -10,7 +10,7 @@ export default class Phone {
     registerer: Registerer;
     inviter: any;
     sessionDescriptionHandler: SessionDescriptionHandler;
-    constructor(config: FonosPhoneConfig);
+    constructor(config: FonosterPhoneConfig);
     call(request: CallRequest): void;
     hangup(): void;
     connect(register?: boolean): void;
