@@ -57,7 +57,7 @@ import Events from "events";
  *  username: "1001",
  *  secret: "changeit",
  *  audioElementId: "remoteAudio",
- *  secret: "ws://yoursignalingserver:5062",
+ *  server: "ws://yoursignalingserver:5062",
  *  extraHeaders: ["X-Extra-Header: 'extra header'"]
  * }
  * 
