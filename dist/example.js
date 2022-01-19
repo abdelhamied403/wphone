@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.disconnectButton = exports.connectButton = void 0;
+exports.sendDtmf = exports.disconnectButton = exports.connectButton = void 0;
 /*
  * Copyright (C) 2021 by Fonoster Inc (https://fonoster.com)
  * http://github.com/fonoster/wphone
@@ -35,6 +35,7 @@ const utils_1 = require("./utils");
 const wphone_1 = __importDefault(require("./wphone"));
 exports.connectButton = (0, utils_1.getButton)("connect");
 exports.disconnectButton = (0, utils_1.getButton)("disconnect");
+exports.sendDtmf = (0, utils_1.getButton)("sendDtmf");
 // Obtaining config from localStorage if available
 window.onload = () => __awaiter(void 0, void 0, void 0, function* () {
     console.debug("Getting config from localStorage [fonosterPhone]");
@@ -76,5 +77,9 @@ exports.connectButton.addEventListener("click", () => __awaiter(void 0, void 0, 
 exports.disconnectButton.addEventListener("click", () => {
     if (phone)
         phone.disconnect();
+});
+exports.sendDtmf.addEventListener("click", () => {
+    if (phone)
+        phone.sendDtmf((0, utils_1.getInput)("dtmfCodes").value);
 });
 //# sourceMappingURL=example.js.map

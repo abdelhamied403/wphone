@@ -65,17 +65,24 @@
         <input type="text" id="extraHeaders" placeholder="X-DID-Info: 9122122120," />
       </td>
     </tr>
+    <tr>
+      <td>DTMF Codes:</td>
+      <td>
+        <input type="text" id="dtmfCodes" placeholder="0-9*#" />
+      </td>
+    </tr>
   </table>
 
   <br />
 
   <button id="connect">Call</button>
   <button id="disconnect">Hangup</button>
+  <button id="sendDtmf">Send DTMF</button>
 
   <audio style="display: none" id="remoteAudio" controls>
     <p>Your browser doesn't support HTML5 audio.</p>
   </audio>
-  <script src="/lib/wphone.js?ref=18"
+  <script src="/lib/wphone.js?ref=20"
     onerror="alert('To run this demo you must first build the library and demo source! See the README.')">
     </script>
 </body>

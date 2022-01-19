@@ -33,7 +33,7 @@ const events_1 = __importDefault(require("events"));
  *  username: "1001",
  *  secret: "changeit",
  *  audioElementId: "remoteAudio",
- *  secret: "ws://yoursignalingserver:5062",
+ *  server: "ws://yoursignalingserver:5062",
  *  extraHeaders: ["X-Extra-Header: 'extra header'"]
  * }
  *
