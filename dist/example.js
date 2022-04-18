@@ -64,6 +64,9 @@ exports.connectButton.addEventListener("click", () => __awaiter(void 0, void 0, 
             targetAOR: (0, utils_1.getInput)("targetAOR").value,
             extraHeaders: config.extraHeaders
         });
+        phone.on('hangup', () => {
+            console.log("all done");
+        });
         config.targetAOR = (0, utils_1.getInput)("targetAOR").value;
         if (config.extraHeaders) {
             config.extraHeaders = config.extraHeaders.join(",");
